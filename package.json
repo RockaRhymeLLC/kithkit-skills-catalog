@@ -1,0 +1,8 @@
+{
+  "name": "kithkit-catalog",
+  "private": true,
+  "description": "Signed skill catalog for AI agents — publish, discover, verify, install",
+  "workspaces": [
+    "packages/*"
+  ]
+}
