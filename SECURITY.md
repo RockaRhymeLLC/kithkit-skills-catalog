@@ -2,7 +2,10 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in the Kithkit Skills Catalog, please report it by emailing **security@rockarhyme.com**.
+If you discover a security vulnerability in the Kithkit Skills Catalog, please report it through **GitHub's private vulnerability reporting**:
+
+1. Go to the [**Security Advisories**](https://github.com/RockaRhymeLLC/kithkit-skills-catalog/security/advisories/new) page, or click the **Security** tab on the repository and select **Report a vulnerability**.
+2. Fill out the advisory form with the details listed below.
 
 Do not open a public GitHub issue for security vulnerabilities.
 
