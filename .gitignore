@@ -1,4 +1,12 @@
 node_modules/
-dist/
 *.tgz
 .DS_Store
+*.log
+
+# Build output (linter dist is committed for CI use)
+packages/catalog/dist/
+packages/client/dist/
+packages/sign/dist/
+
+# Temp files
+.kithkit-temp/

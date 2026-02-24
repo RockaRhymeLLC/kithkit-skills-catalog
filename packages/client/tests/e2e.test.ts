@@ -437,7 +437,7 @@ describe('t-094: End-to-end: author submits, agent installs, config works', () =
 
   it('step 2: CI lints skill (passes) and signs archive', async () => {
     // Dynamically import linter using import.meta.dirname-based path
-    const linterPath = join(packagesDir, 'kithkit-linter', 'src', 'index.ts');
+    const linterPath = join(packagesDir, 'linter', 'src', 'index.ts');
     const { lint } = await import(linterPath) as { lint: (dir: string) => { pass: boolean; score: { errors: number; warnings: number; info: number } } };
 
     const result = lint(skillDir);
@@ -799,7 +799,7 @@ describe('t-095: End-to-end security flow — tamper, revoke, selftest', () => {
     const revocationList = buildRevocationList(revocationEntries, keys.privateKey);
 
     // Dynamically import checkInstalledRevocations from catalog
-    const catalogRevocationPath = join(packagesDir, 'kithkit-catalog', 'src', 'revocation.ts');
+    const catalogRevocationPath = join(packagesDir, 'catalog', 'src', 'revocation.ts');
     const { checkInstalledRevocations } = await import(catalogRevocationPath) as {
       checkInstalledRevocations: (
         list: SignedRevocationList,

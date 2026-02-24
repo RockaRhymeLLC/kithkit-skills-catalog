@@ -4,5 +4,13 @@
   "description": "Signed skill catalog for AI agents — publish, discover, verify, install",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "lint": "npm run lint --workspaces",
+    "test": "npm test --workspaces",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }

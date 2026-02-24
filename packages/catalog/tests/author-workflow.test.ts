@@ -65,7 +65,7 @@ describe('t-092: Author runs linter locally before submission', () => {
   it('step 1: kithkit-lint command is available via linter package', async () => {
     // Verify the linter package exists and has a bin entry
     const linterPkg = await readFile(
-      join(packagesDir, 'kithkit-linter', 'package.json'),
+      join(packagesDir, 'linter', 'package.json'),
       'utf8',
     );
     const pkg = JSON.parse(linterPkg);
@@ -78,7 +78,7 @@ describe('t-092: Author runs linter locally before submission', () => {
     const skillDir = await createTestSkill(testDir, 'lint-test-skill');
 
     // Import the linter
-    const linterPath = join(packagesDir, 'kithkit-linter', 'src', 'index.ts');
+    const linterPath = join(packagesDir, 'linter', 'src', 'index.ts');
     const { lint } = await import(linterPath);
     const result = lint(skillDir);
 
@@ -93,7 +93,7 @@ describe('t-092: Author runs linter locally before submission', () => {
     const testDir = join(tmpDir, 't092-pass');
     const skillDir = await createTestSkill(testDir, 'good-lint-skill');
 
-    const linterPath = join(packagesDir, 'kithkit-linter', 'src', 'index.ts');
+    const linterPath = join(packagesDir, 'linter', 'src', 'index.ts');
     const { lint } = await import(linterPath);
     const result = lint(skillDir);
 
@@ -144,7 +144,7 @@ describe('t-093: Author submits skill via PR workflow', () => {
     const skillDir = await createTestSkill(testDir, 'ci-test-skill');
 
     // Simulate CI linting step
-    const linterPath = join(packagesDir, 'kithkit-linter', 'src', 'index.ts');
+    const linterPath = join(packagesDir, 'linter', 'src', 'index.ts');
     const { lint } = await import(linterPath);
     const result = lint(skillDir);
 
